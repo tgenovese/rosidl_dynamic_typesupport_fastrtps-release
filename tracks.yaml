@@ -1,3 +1,4 @@
+release_repo_url: git@github.com:tgenovese/rosidl_dynamic_typesupport_fastrtps-release.git
 tracks:
   iron:
     actions:

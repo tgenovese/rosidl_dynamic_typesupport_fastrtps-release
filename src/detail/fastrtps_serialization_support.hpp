@@ -12,11 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#ifndef DETAIL__FASTDDS_SERIALIZATION_SUPPORT_HPP_
-#define DETAIL__FASTDDS_SERIALIZATION_SUPPORT_HPP_
+#ifndef DETAIL__FASTRTPS_SERIALIZATION_SUPPORT_HPP_
+#define DETAIL__FASTRTPS_SERIALIZATION_SUPPORT_HPP_
 
-#include <fastdds/dds/xtypes/dynamic_types/DynamicDataFactory.hpp>
-#include <fastdds/dds/xtypes/dynamic_types/DynamicTypeBuilderFactory.hpp>
+#include <fastrtps/types/DynamicDataFactory.h>
+#include <fastrtps/types/DynamicTypeBuilderFactory.h>
 
 #include <rcutils/types/rcutils_ret.h>
 #include <rosidl_dynamic_typesupport_fastrtps/visibility_control.h>
@@ -25,20 +25,20 @@
 
 
 // CORE ============================================================================================
-typedef struct fastdds__serialization_support_impl_handle_s
+typedef struct fastrtps__serialization_support_impl_handle_s
 {
-  eprosima::fastdds::dds::DynamicTypeBuilderFactory::_ref_type type_factory_;
-  eprosima::fastdds::dds::DynamicDataFactory::_ref_type data_factory_;
-} fastdds__serialization_support_impl_handle_t;
+  eprosima::fastrtps::types::DynamicTypeBuilderFactory * type_factory_;
+  eprosima::fastrtps::types::DynamicDataFactory * data_factory_;
+} fastrtps__serialization_support_impl_handle_t;
 
 ROSIDL_DYNAMIC_TYPESUPPORT_FASTRTPS_PUBLIC
 rcutils_ret_t
-fastdds__serialization_support_impl_fini(
-  rosidl_dynamic_typesupport_serialization_support_impl_t* serialization_support_impl);
+fastrtps__serialization_support_impl_fini(
+  rosidl_dynamic_typesupport_serialization_support_impl_t * serialization_support_impl);
 
 ROSIDL_DYNAMIC_TYPESUPPORT_FASTRTPS_PUBLIC
 rcutils_ret_t
-fastdds__serialization_support_interface_fini(
-  rosidl_dynamic_typesupport_serialization_support_interface_t* serialization_support_interface);
+fastrtps__serialization_support_interface_fini(
+  rosidl_dynamic_typesupport_serialization_support_interface_t * serialization_support_interface);
 
-#endif  // DETAIL__FASTDDS_SERIALIZATION_SUPPORT_HPP_
+#endif  // DETAIL__FASTRTPS_SERIALIZATION_SUPPORT_HPP_

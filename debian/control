@@ -1,0 +1,12 @@
+Source: ros-jazzy-rosidl-dynamic-typesupport-fastrtps
+Section: misc
+Priority: optional
+Maintainer: Brandon Ong <brandon@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), ros-jazzy-ament-cmake-ros, ros-jazzy-fastcdr, ros-jazzy-fastrtps, ros-jazzy-fastrtps-cmake-module, ros-jazzy-rcutils, ros-jazzy-rosidl-dynamic-typesupport, ros-jazzy-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-rosidl-dynamic-typesupport-fastrtps
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-jazzy-fastcdr, ros-jazzy-fastrtps, ros-jazzy-rcutils, ros-jazzy-rosidl-dynamic-typesupport, ros-jazzy-ros-workspace
+Description: FastDDS serialization support implementation for use with C/C++.
